@@ -3,6 +3,7 @@
 
 # Cómo funciona?
  El dispositivo funciona como un rubber ducky de hak5 con la diferencia que se pueden enviar los Scripts por medio de internet.
+ 
  ![Supported Python versions](https://raw.githubusercontent.com/miguelebf/WBU/master/Imagenes/esquema.png)
 
 
