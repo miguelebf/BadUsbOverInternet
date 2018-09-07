@@ -3,7 +3,7 @@
 
 # Cómo funciona?
  El dispositivo funciona como un rubber ducky de hak5 con la diferencia que se pueden enviar los Scripts por medio de internet.
- <img src=" https://raw.githubusercontent.com/miguelebf/WBU/master/Imagenes/esquema.png" /> 
+ <img src=" https://raw.githubusercontent.com/miguelebf/WBU/master/Imagenes/esquema.png" width="800" height="300"/> 
 
 
 # Hardware
