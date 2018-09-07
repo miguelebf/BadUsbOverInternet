@@ -37,9 +37,7 @@ def main():
             elif option=="3":
                 Funtions.sendScript(clientsocket,file) 
             elif option=="4":
-                file = open("Script.txt", "r")
-                clientsocket.send(file.read().encode('ascii'))
-                file.close()
+                print("En desarrollo..")
             elif option=="5":
                 flag=False
             else:

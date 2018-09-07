@@ -4,7 +4,7 @@
 #define BAUD_RATE 57200
 WiFiClient client;
 int port=9999;
-String host="192.168.0.2";
+String host="192.168.0.2"; //Cambiar por host ip del Servidor
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
   //Serial 
