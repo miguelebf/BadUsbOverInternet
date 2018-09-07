@@ -48,6 +48,10 @@ usamos un NodeMCU que facilita mucho las cosas a la hora de programar el ESP-12.
  - Comunicación por gsm/gprs
  - Desarrollar un dispositivo final
 
+ ## Créditos
+
+ - [WHID WiFi HID Injector](https://github.com/whid-injector/WHID) (funciones para convertir de Ducky Script a Arduino) 
+
 Licencia
 ----
 
