@@ -82,8 +82,17 @@ def sendScript(clientsocket,file):
     """
     return
 
-def moidifyScript():
+def moidifyScript(operativeSystem):
     print("/n"+"[+]Modifica el Script y Guardalo!...")
-    os.system('gedit script.txt')    
+    
+    if operativeSystem=="linux2":
+        os.system('nano Script.txt')
+    elif operativeSystem=="darwin":
+        os.system('open -t Script.txt')
+    elif operativeSystem=="win32" or operativeSystem=="win64":
+        os.system('notepad Script.txt')
+    else:
+        print("[!]UnknownOperative System")
+    
     input("[?]Enter para continuar..")
     return

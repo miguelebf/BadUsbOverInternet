@@ -4,13 +4,13 @@
 #define BAUD_RATE 57200
 WiFiClient client;
 int port=9999;
-String host="192.168.0.2"; //Cambiar por host ip del Servidor
+String host="192.168.43.168"; //Cambiar por ip del Servidor
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
   //Serial 
   Serial.begin(BAUD_RATE);
   //Wifi 
-  WiFi.begin("Anon", "mebfgeek");
+  WiFi.begin("MEBF", "12345678");
   
   while (WiFi.status() != WL_CONNECTED){
     delay(500);

@@ -8,7 +8,6 @@ import Funtions
 import socket
 import os
 import sys
-
 def main():
     file=None
     serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -16,14 +15,14 @@ def main():
     host = socket.gethostname()
     try:
         #Detecta Sistema Operativo
-        #--opertiveSystem = sys.platform
+        opertiveSystem = sys.platform
         # Bindea el puerto
         serversocket.bind((host, port))
         # Cola de hasta 1 peticiones 
         serversocket.listen(1)
         # Espera por el cliente 
         print("[+] Esperando conexion con BadUsbOverInternet...")
-        clientsocket, addr = serversocket.accept()
+        clientsocket = serversocket.accept()
         print("[+] Se ha establecido conexion con el BadUsbOverInternet")
         flag=True
         while flag:
@@ -31,7 +30,7 @@ def main():
             Funtions.showMenu()
             option=input("[?]Ingresa una opcion: ")
             if option=="1":  
-                Funtions.moidifyScript()
+                Funtions.moidifyScript(opertiveSystem)
             elif option=="2":
                 Funtions.readScript(file)
             elif option=="3":
@@ -46,7 +45,6 @@ def main():
         clientsocket.close()
         print("[-]Adios!")
         sys.exit()
-        #clientsocket.send(msg.encode('ascii'))
     except KeyboardInterrupt:
         try:
             clientsocket.close()
