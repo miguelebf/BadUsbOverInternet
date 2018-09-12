@@ -22,7 +22,7 @@ def main():
         serversocket.listen(1)
         # Espera por el cliente 
         print("[+] Esperando conexion con BadUsbOverInternet...")
-        clientsocket = serversocket.accept()
+        clientsocket, addr = serversocket.accept()
         print("[+] Se ha establecido conexion con el BadUsbOverInternet")
         flag=True
         while flag:
