@@ -1,4 +1,4 @@
-# WBH
+# WBU
 ![Supported Python versions](https://img.shields.io/badge/python-3.6-orange.svg)  ![Supported OS](https://img.shields.io/badge/Supported%20OS-Kali_Linux-yellow.svg)  ![Conference](https://img.shields.io/badge/DragonJarCon-Colombia_2018-g.svg) ![Conference](https://img.shields.io/badge/EcuaHack-Ecuador_2018-g.svg) ![Conference](https://img.shields.io/badge/EkoParty-Argentina_2018-g.svg)
 
 # Cómo funciona?
