@@ -30,10 +30,29 @@ void loop() {
   if (client.available()){
     parpadearNodeMCU();
     String script = client.readStringUntil('\r');
-    Serial.println(script);
+    Serial.println(script); 
   }
   delay(1000);
- }
+  if(Serial.available()){
+    uint8_t respuesta = Serial.read();
+    if(respuesta==0x1){
+      client.print("1");
+    else{
+      client.print("0");
+
+      }
+    }
+  }
+}
+  //Reconexion Socket
+  while(true){
+    if (client.connect(host,port)){
+      break;
+    }
+    else{
+      continue;
+    }
+  }
 }
 void parpadearNodeMCU(){
   digitalWrite(LED_BUILTIN, LOW);

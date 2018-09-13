@@ -32,7 +32,8 @@ void loop() {
         script = script.substring(latest_return + 1);  
       }
      }
-      script = ""; 
+      script = "";
+      ExternalSerial.write(0x1);  
     }  
   }  
 }

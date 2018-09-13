@@ -70,16 +70,18 @@ def readScript(file):
 def sendScript(clientsocket,file):
     file = open("Script.txt", "r")
     clientsocket.send(file.read().encode('ascii'))
-    print("[+]Envianado...")
-    """respuesta=clientsocket.recv(1024)
-    if (respuesta=="O"):
-        print("[+]Script recibido por el BadUsb")
+    print("[+]Script Enviado")
+    print("[+]Ejecutando Script...")
+    respuesta=clientsocket.recv(1024)
+    print(respuesta)
+    if (respuesta=="1"):
+        print("[+]Script Ejecutado por el BadUsb")
     else:
-        print("[!]Error al enviar el script")
+        print("[!]Error al ejecutar el script")
         input("[?]Enter para continuar..")
         return
     input("[?]Enter para continuar..")
-    """
+    
     return
 
 def moidifyScript(operativeSystem):

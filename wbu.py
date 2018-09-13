@@ -1,7 +1,7 @@
 ###############################
 #                             #
 #  Author: Miguel Bustamante  #
-#  Server WBU v 0.1  #
+#  Server WBU v 0.1           #
 #                             #
 ###############################
 import Funtions
