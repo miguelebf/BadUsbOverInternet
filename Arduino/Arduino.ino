@@ -1,4 +1,4 @@
-#define BAUD_RATE 57200
+#define BAUD_RATE 9600
 #include <Keyboard.h>
 #define ExternSerial Serial1
 String script = "";

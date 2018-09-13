@@ -1,7 +1,7 @@
 //Librerias
 #include <ESP8266WiFi.h>
 //Variables
-#define BAUD_RATE 57200
+#define BAUD_RATE 9600
 WiFiClient client;
 int port=9999;
 String host="192.168.43.168"; //Cambiar por ip del Servidor
@@ -10,7 +10,7 @@ void setup() {
   //Serial 
   Serial.begin(BAUD_RATE);
   //Wifi 
-  WiFi.begin("MEBF", "12345678");
+  WiFi.begin("Anon", "mebfgeek");
   
   while (WiFi.status() != WL_CONNECTED){
     delay(500);

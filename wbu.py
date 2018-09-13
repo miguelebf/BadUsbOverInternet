@@ -1,7 +1,7 @@
 ###############################
 #                             #
 #  Author: Miguel Bustamante  #
-#  Server InternetDuck v 1.0  #
+#  Server WBU v 0.1  #
 #                             #
 ###############################
 import Funtions
