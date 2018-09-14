@@ -50,11 +50,11 @@ v0.1 by Miguel Bustamante
 
 def showMenu():
     strMenu="""
-        1. Modificar Script
-        2. Ver Script
-        3. Enviar Script
-        4. Modo Interactivo            
-        5. Salir
+        1. Modify Script
+        2. Show Script
+        3. Send Script
+        4. Interactive Mode            
+        5. Exit
     """
     print(strMenu)
     return 
@@ -63,29 +63,29 @@ def readScript(file):
     print("--------------------------------------------")
     print(file.read())
     print("--------------------------------------------")
-    input("[?]Enter para continuar..")
+    input("[?]Enter to continue..")
     file.close()
     return
 
 def sendScript(clientsocket,file):
     file = open("Script.txt", "r")
     clientsocket.send(file.read().encode('ascii'))
-    print("[+]Script Enviado")
-    print("[+]Ejecutando Script...")
+    print("[+]Sent Script")
+    print("[+]Running Script ...")
     respuesta=clientsocket.recv(1024)
     
     if (respuesta.decode()=="1"):
-        print("[+]Script Ejecutado por el BadUsb")
+        print("[+]Executed Script")
     else:
-        print("[!]Error al ejecutar el script")
-        input("[?]Enter para continuar..")
+        print("[!]Error")
+        input("[?]Enter to continue..")
         return
-    input("[?]Enter para continuar..")
+    input("[?]Enter to continue..")
     
     return
 
 def moidifyScript(operativeSystem):
-    print("/n"+"[+]Modifica el Script y Guardalo!...")
+    print("/n"+"[+]Modify Script & Save it!...")
     
     if operativeSystem=="linux2":
         os.system('nano Script.txt')
@@ -94,7 +94,7 @@ def moidifyScript(operativeSystem):
     elif operativeSystem=="win32" or operativeSystem=="win64":
         os.system('notepad Script.txt')
     else:
-        print("[!]UnknownOperative System")
+        print("[!]Unknown Operative System")
     
-    input("[?]Enter para continuar..")
+    input("[?]Enter to continue..")
     return

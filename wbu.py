@@ -21,14 +21,14 @@ def main():
         # Cola de hasta 1 peticiones 
         serversocket.listen(1)
         # Espera por el cliente 
-        print("[+] Esperando conexion con BadUsbOverInternet...")
+        print("[+] Waiting connection with BadUsb...")
         clientsocket, addr = serversocket.accept()
-        print("[+] Se ha establecido conexion con el BadUsbOverInternet")
+        print("[+]Connection has been established with BadUsb")
         flag=True
         while flag:
             Funtions.showBanner()
             Funtions.showMenu()
-            option=input("[?]Ingresa una opcion: ")
+            option=input("[?]Please enter an option: ")
             if option=="1":  
                 Funtions.moidifyScript(opertiveSystem)
             elif option=="2":
@@ -36,22 +36,22 @@ def main():
             elif option=="3":
                 Funtions.sendScript(clientsocket,file) 
             elif option=="4":
-                print("En desarrollo..")
+                print("Developing..")
             elif option=="5":
                 flag=False
             else:
-                print("[!]Seleccion incorrecta!")        
+                print("[!]Incorrect selection!")        
         
         clientsocket.close()
-        print("[-]Adios!")
+        print("[-]Bye!")
         sys.exit()
     except KeyboardInterrupt:
         try:
             clientsocket.close()
             file.close()
-            print("[-]Adios!")
+            print("[-]Bye!")
         except:
-            print("[-]Adios!")
+            print("[-]Bye!")
         sys.exit()
 
 if (__name__ == "__main__"):
