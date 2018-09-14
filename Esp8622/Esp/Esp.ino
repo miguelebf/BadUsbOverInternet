@@ -4,7 +4,7 @@
 #define BAUD_RATE 9600
 WiFiClient client;
 int port=9999;
-String host="192.168.43.168"; //Cambiar por ip del Servidor
+String host="192.168.0.3"; //Cambiar por ip del Servidor
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
   //Serial 
@@ -37,13 +37,13 @@ void loop() {
     uint8_t respuesta = Serial.read();
     if(respuesta==0x1){
       client.print("1");
+    }
     else{
       client.print("0");
 
       }
     }
   }
-}
   //Reconexion Socket
   while(true){
     if (client.connect(host,port)){
@@ -54,11 +54,10 @@ void loop() {
     }
   }
 }
+ 
 void parpadearNodeMCU(){
   digitalWrite(LED_BUILTIN, LOW);
   delay(500);               
   digitalWrite(LED_BUILTIN, HIGH);
   delay(500);
  }
-
-

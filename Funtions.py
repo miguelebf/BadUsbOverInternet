@@ -73,8 +73,8 @@ def sendScript(clientsocket,file):
     print("[+]Script Enviado")
     print("[+]Ejecutando Script...")
     respuesta=clientsocket.recv(1024)
-    print(respuesta)
-    if (respuesta=="1"):
+    
+    if (respuesta.decode()=="1"):
         print("[+]Script Ejecutado por el BadUsb")
     else:
         print("[!]Error al ejecutar el script")

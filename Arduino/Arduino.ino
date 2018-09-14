@@ -21,7 +21,7 @@ void loop() {
         while(script.length() > 0){  
         int latest_return = script.indexOf("\n");
         if(latest_return == -1){
-        Line(script);
+        proscesarLinea(script);
         script = "";
         }
         else{
@@ -33,7 +33,7 @@ void loop() {
       }
      }
       script = "";
-      ExternalSerial.write(0x1);  
+      ExternSerial.write(0x1);  
     }  
   }  
 }
@@ -54,7 +54,7 @@ void proscesarLinea(String _line)
     int replaynum = _line.substring(firstSpace + 1).toInt();
     while(replaynum)
     {
-      Line(last);
+      proscesarLinea(last);
       --replaynum;
     }
   } else{
