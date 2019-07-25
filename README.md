@@ -42,8 +42,8 @@ usamos un NodeMCU que facilita mucho las cosas a la hora de programar el ESP-12.
 # cd WBU
 # python3 wbu.py
 ```
-##CONs
-DragonJar Con
+## CONs
+ - DragonJar Con
 https://www.youtube.com/watch?v=idzu2hnyVn8
 
 ## To-do
