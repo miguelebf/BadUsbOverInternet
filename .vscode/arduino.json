@@ -1,5 +1,0 @@
-{
-    "board": "arduino:avr:leonardo",
-    "port": "COM14",
-    "sketch": "Arduino\\Arduino.ino"
-}
